@@ -538,8 +538,9 @@ class _CountChipState extends State<_CountChip>
     super.didChangeDependencies();
     if (_animationStarted) return;
     _animationStarted = true;
-    if (!MediaQuery.disableAnimationsOf(context))
+    if (!MediaQuery.disableAnimationsOf(context)) {
       _controller.repeat(reverse: true);
+    }
   }
 
   @override
